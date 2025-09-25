@@ -328,9 +328,7 @@ def main():
     match = module.params['match']
     replace = module.params['replace']
 
-    warnings = list()
-    check_args(module, warnings)
-    result = dict(changed=False, saved=False, warnings=warnings)
+    result = dict(changed=False, saved=False)
 
     candidate, want_banners = get_candidate(module)
     if module.params['backup']:
