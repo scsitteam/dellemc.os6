@@ -468,10 +468,7 @@ def main():
         key = 'ansible_net_%s' % key
         ansible_facts[key] = value
 
-    warnings = list()
-    check_args(module, warnings)
-
-    module.exit_json(ansible_facts=ansible_facts, warnings=warnings)
+    module.exit_json(ansible_facts=ansible_facts)
 
 
 if __name__ == '__main__':
